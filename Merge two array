@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr1[]={1,2,3,4,5,6};
+    int arr2[]= {8,9,0,6,5};
+    
+    // int arr3[] arr1[]+ arr2[];
+  int sizeArr1 = sizeof arr1/sizeof arr1[0];
+  int sizeArr2 = sizeof arr2/sizeof arr2[0];
+  int sizeArr3 = sizeArr1 +sizeArr2;
+  int arr3[sizeArr3];
+  cout<<"sizze of arr3 = "<<sizeArr3<<endl;
+  
+  for(int i =0; i<sizeArr3; i++){
+      if(i<sizeArr1)
+      arr3[i] = arr1[i];
+      else
+      arr3[i]=arr2[i-sizeArr1];
+      
+  }
+  for(int i=0; i<sizeArr3; i++){
+      cout<<arr3[i]<<" ";
+  }
+    
+    
+
+    return 0;
+}
