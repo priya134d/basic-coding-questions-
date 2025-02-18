@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+   int n, n0=0, n1=1;
+   
+   cin>>n;
+   cout<<n0<<" "<<n1<<" ";
+   
+
+       int sum=0;
+       for(int i=2; i<n;i++){
+       sum=n0+n1;
+       cout<<sum<<" ";
+       n0=n1;
+       n1=sum;
+   }
+
+    return 0;
+}
