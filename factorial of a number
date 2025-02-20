@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int n;
+   cin>>n;
+   int multiplication = 1;
+for(int i=1; i<=n; i++){
+    multiplication = multiplication*i;
+    cout<<i<<"*";
+}
+cout<<endl<<multiplication;
+
+    return 0;
+}
