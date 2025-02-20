@@ -20,6 +20,5 @@ int main()
    cin>>n;
 cout<<func(int n)<<endl;
 
-
     return 0;
 }
