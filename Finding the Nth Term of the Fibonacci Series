@@ -11,14 +11,13 @@ int func(int n){
        cout<<sum<<" ";
    }
    cout<<endl<<"nth term of fibonacci series is: ";
-return n1;
+  return n1;
 }
 
 int main()
 {
    int n;
    cin>>n;
-cout<<func(n)<<endl;
-
-    return 0;
+   cout<<func(n)<<endl;
+ return 0;
 }
