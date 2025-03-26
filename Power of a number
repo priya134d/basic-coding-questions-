@@ -14,3 +14,25 @@ cout<<sum;
 
     return 0;
 }
+
+## ----------------------------- power of a number with function --------------------------------------
+
+#include <iostream>
+using namespace std;
+int powerNum(int a, int b){
+    int sum=1;
+      for(int i=1; i<=b; i++){
+      sum = sum*a;
+  }
+  return sum;
+}
+
+int main()
+{
+  int base,expo;
+  cin>>base;
+  cin>>expo;
+  cout<<powerNum(base,expo);
+  
+    return 0;
+}
