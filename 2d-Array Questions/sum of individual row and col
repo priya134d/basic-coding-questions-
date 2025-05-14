@@ -1,1 +1,47 @@
+#include <iostream>
+using namespace std;
 
+int main()
+{
+    int n, m;
+    cout<<"enter row and col"<<endl;
+    cin>>n>>m;
+  int a[n][m],i,j,sumR,sumC;
+  cout<<"enter the element of matrix"<<endl;
+  
+  for(i=0;i<n;i++){
+      for(j=0;j<m;j++){
+          cin>>a[i][j];
+      }
+  }
+  
+  cout<<"print the matrix"<<endl;
+    for(i=0;i<n;i++){
+      for(j=0;j<m;j++){
+          cout<<a[i][j]<<" ";
+      }
+      cout<<endl;
+  }
+  
+    for(i=0;i<n;i++){
+        sumR=0; 
+      for(j=0;j<m;j++){
+          sumR=sumR+a[i][j];
+          sumC= sumC+a[j][i];
+      }
+      cout<<"sum of rows: "<<sumR<<endl;
+      
+  }
+  
+      for(i=0;i<m;i++){
+        sumC=0; 
+      for(j=0;j<n;j++){
+          sumC= sumC+a[j][i];
+      }
+  
+      cout<<"sum of col: "<<sumC<<endl;
+      
+  }
+ 
+    return 0;
+}
