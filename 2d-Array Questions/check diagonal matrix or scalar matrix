@@ -24,26 +24,20 @@ int main()
                break;
        }
            
-           else if((i!=j)&&(a[i][j]!=0)){
-           
+           else if((i!=j)&&(a[i][j]!=0)){ 
                 f=1;
                break;
            }
          }
          
          if(f==1)
-           break;//break the outer loop as well
-           
+           break;//break the outer loop as well           
       }
-      
-      
-      
+
       if(f==0){
           cout<<"diagonal matrix";
       }
       else
-         cout<<"non-diagonal matrix";
-      
-       
+         cout<<"non-diagonal matrix";     
     return 0;
 }
