@@ -1,10 +1,16 @@
+#include <iostream>
 using namespace std;
 
 int main()
 {
-   int n,m;
+   int n,m, f=0;
    cin>>n>>m;
    int a[n][m];
+   
+   if(n!=m){
+       cout<<"not a square matrix so it can't be diagonal"<<endl;
+   }
+   
    for(int i=0; i<n; i++){
        for(int j=0; j<m; j++){
            cin>>a[i][j];
@@ -13,15 +19,31 @@ int main()
    
       for(int i=0; i<n; i++){
          for(int j=0; j<m; j++){
-       if((i==j)&&(a[i][j]!=0)){
-               cout<<"diagonal matrix";
-               return 1;
-           }
-           else
-           cout<<"non-diagonal matrix";
-         }
-      }
+       if((i==j)&&(a[i][j]==0)){
+               f=1;
+               break;
+       }
            
+           else if((i!=j)&&(a[i][j]!=0)){
+           
+                f=1;
+               break;
+           }
+         }
+         
+         if(f==1)
+           break;//break the outer loop as well
+           
+      }
+      
+      
+      
+      if(f==0){
+          cout<<"diagonal matrix";
+      }
+      else
+         cout<<"non-diagonal matrix";
+      
        
     return 0;
 }
